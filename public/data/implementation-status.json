@@ -2893,9 +2893,7 @@
     },
     "HangingMossBlock": {
       "implemented": true,
-      "todos": [
-        "Implement TIP property update on shape changes, bonemeal growth, and tick."
-      ],
+      "todos": [],
       "entries": [
         "pale_hanging_moss"
       ]
