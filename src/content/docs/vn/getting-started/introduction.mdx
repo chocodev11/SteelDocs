@@ -1,0 +1,65 @@
+---
+title: Steel là gì?
+description: Tìm hiểu Steel là gì và tại sao bạn có thể muốn sử dụng nó.
+sidebar:
+  order: 0
+---
+
+import { mcVersion, steelVersion } from "@/lib/versions";
+
+Steel là một máy chủ Minecraft Java Edition được viết bằng Rust, nhắm mục tiêu Minecraft **{await mcVersion()}**.\
+Nó được thiết kế cho hiệu suất, độ tin cậy và mang lại trải nghiệm gọn gàng cho nhà phát triển.
+
+Không giống như các máy chủ dựa trên Java truyền thống, Steel tận dụng các đảm bảo an toàn bộ nhớ của Rust và zero-cost abstractions để mang lại hiệu suất vượt trội.
+
+## Steel dành cho ai?
+
+#### Quản trị viên máy chủ (Server Administrators)
+
+Nếu bạn đang chạy một máy chủ Minecraft và đang tìm kiếm:
+
+- **Hiệu suất tốt hơn** - Cấu trúc dữ liệu Lock-free (không khóa) và xử lý đồng thời hiệu quả
+- **Sử dụng bộ nhớ thấp hơn** - Khả năng quản lý bộ nhớ hiệu quả của Rust
+- **Độ tin cậy** - Mã an toàn bộ nhớ (memory-safe) đồng nghĩa với việc ít sự cố và rủi ro khai thác lỗi hơn
+
+#### Nhà phát triển (Developers)
+
+Nếu bạn đang xây dựng các công cụ hoặc đóng góp vào phần mềm máy chủ:
+
+- **Cơ sở mã hiện đại** - Phiên bản Rust 2024 với 10 không gian làm việc (workspace crates) tập trung
+- **An toàn kiểu (Type safety)** - Bắt lỗi tại thời điểm biên dịch (compile time), không phải thời gian chạy (runtime)
+- **Hệ thống hành vi (Behavior system)** - Các hành vi khối (block) và vật phẩm (item) có thể mở rộng
+
+## Trạng thái hiện tại
+
+Steel đang được tích cực phát triển (v{await steelVersion()}).
+
+Steel hiện đang hỗ trợ:
+
+- Mạng TCP với các máy khách (client) Java Edition
+- Xác thực Mojang và mã hóa
+- Nén gói Zlib
+- Tạo thế giới (World generation)
+  - Hoàn toàn giống 100% vanilla parity đã được kiểm tra trên 2500 chunks trong tất cả các dimensions
+  - Hiện tại là trình tạo chunk cpu nhanh nhất từng được viết
+  - Kiểm tra hiệu suất trong [trang Điểm chuẩn (Benchmark)](../../reference/benchmarks) của chúng tôi
+- Tải, tạo và lưu trữ chunk (persistence)
+- Đặt và phá vỡ các khối (block)
+- Di chuyển của người chơi với khả năng va chạm và xác thực tốc độ
+- Hệ thống trò chuyện với các tin nhắn đã ký (signed messages)
+- Quản lý túi đồ và thùng chứa (ví dụ: thùng gỗ - barrels)
+- Các thực thể với mục tiêu AI (AI goals)
+- Các thực thể khối (Block entities)
+- Favicon tùy chỉnh và các liên kết máy chủ
+- Tự động hoàn thành lệnh (Command auto completion) trong giao diện điều khiển (console)
+
+Hãy tham gia vào [cộng đồng](#community) của chúng tôi để nhận các bản cập nhật mới nhất.
+
+## Cộng đồng
+
+- **Discord**: https://steel.dev/discord
+- **GitHub**: https://github.com/Steel-Foundation/SteelMC
+
+## Các bước tiếp theo
+
+Bạn đã sẵn sàng bắt đầu? Hãy chuyển đến hướng dẫn [Cài đặt](../installation/).
